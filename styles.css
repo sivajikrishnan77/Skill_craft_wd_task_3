@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-mode button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.game-mode button:hover {
+    background-color: #2980b9;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0; /* Remove any gap between cells */
+    width: 300px; /* Fixed size for the board */
+    height: 300px;
+    border: 3px solid #333; /* Outer border around the board */
+    margin-top: 20px;
+}
+
+.cell {
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    border: 1px solid #333; /* Thin border for visual grid lines */
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #bdc3c7;
+}
+
+#statusMessage {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+#resetBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#resetBtn:hover {
+    background-color: #c0392b;
+}
+/* Popup styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.popup.show {
+    display: block; /* Show popup */
+}
+
+
+
+
